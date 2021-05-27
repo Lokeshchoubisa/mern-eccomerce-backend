@@ -1,0 +1,4 @@
+.env
+src/uploads/*
+node_modules
+notes.txt
