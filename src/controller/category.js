@@ -15,7 +15,7 @@ exports.addCategory = (req, res) => {
         CategoryObj.parentId = req.body.parentId;
     }
     if (req.file) {
-        CategoryObj.categoryImage =process.env.API +"/public/" + req.file.filename;
+        CategoryObj.categoryImage = "/public/" + req.file.filename;
     }
     // console.log(category);
     Category.find({ slug: CategoryObj.slug }, (err, body) => {

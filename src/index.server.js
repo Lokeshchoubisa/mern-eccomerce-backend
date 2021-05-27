@@ -42,7 +42,16 @@ app.use("/public",express.static(path.join(__dirname,"uploads")));
 
 ////////////////////////////////////////////////////////// database management ///////////////////////////////////////////////////////////
 
-mongoose.connect("mongodb://localhost:27017/eccomerceDB",{useNewUrlParser:true,useUnifiedTopology: true,useCreateIndex:true}).then(()=>{
+// mongoose.connect("mongodb://localhost:27017/eccomerceDB",{useNewUrlParser:true,useUnifiedTopology: true,useCreateIndex:true}).then(()=>{
+//     console.log("database connected");
+// });
+
+
+mongoose.connect(
+    `mongodb+srv://${process.env.MONGO_DB_USER}:${process.env.MONGO_DB_PASSWORD}@cluster0.h2vgn.mongodb.net/${process.env.MONGO_DB_DATABASE}?retryWrites=true&w=majority`,
+    {useNewUrlParser:true,useUnifiedTopology: true,
+        useCreateIndex:true
+    }).then(()=>{
     console.log("database connected");
 });
 
