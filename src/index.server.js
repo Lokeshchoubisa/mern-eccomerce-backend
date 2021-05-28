@@ -2,7 +2,7 @@ const express=require("express");
 const env=require("dotenv");
 const bodyParser=require("body-parser")
 const app=express();
-const ejs=require("ejs");
+// const ejs=require("ejs");
 const mongoose=require("mongoose");
 const path=require("path");
 
@@ -23,7 +23,7 @@ const cors=require("cors")
 
 
 mongoose.set('useFindAndModify', false);
-app.set("view engine","ejs");
+// app.set("view engine","ejs");
 env.config();
 app.use(express.json());
 app.use(cors());
