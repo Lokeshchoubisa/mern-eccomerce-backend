@@ -14,7 +14,7 @@
       "api",
       "api"
     ],
-    "author": "Rizwan Khan",
+    "author": "Lokesh Choubisa ",
     "license": "ISC",
     "dependencies": {
       "aws-sdk": "^2.809.0",
